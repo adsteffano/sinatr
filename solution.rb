@@ -1,5 +1,5 @@
 require 'sinatra'
 
 get '/' do
-  "¡Hola Mundo!"
+ <h1> Hola Juan! </h1>
 end
