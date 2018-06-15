@@ -1,7 +1,7 @@
 require 'sinatra'
 
 get '/' do
-	if params.empty? || nil
+	if params.empty? || params.nil?
 	"<h1>Hola desconocido!</h1>"
 	else
 	params[:nombre]
