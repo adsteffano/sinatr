@@ -1,6 +1,6 @@
 require 'sinatra'
 
-get '/' do
+get '/makers' do
 	if params[:nombre].empty?
 	"<h1>Hola desconocido!</h1>"
 	else
