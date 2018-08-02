@@ -1,10 +1,19 @@
-require 'sinatra'
+require "sinatra"
 
-get '/:makers/:nombre' do
-	if :nombre.empty?
-	"<h1>Hola desconocido!</h1>"
+get '/' do
+	unless params[:nombre]
+		"Hola mundo"
 	else
-	:nombre
-	"<h1>Hola #{params[:nombre].capitalize}!</h1>"
+		"Hola #{params[:nombre]}"
+	end
+	erb :index
 end
+
+get '/:nombre' do
+	"Hola #{params[:nombre]}"
 end
+
+post '/nuevo' do
+	"!Hola #{params[:verbo]}!"	
+end
+
